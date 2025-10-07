@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand fw-bold" routerLink="/">
+      <i class="uil uil-user"></i> AIS 
+    </a>
+
+    <!-- Toggler (mobile) -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a routerLink="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a routerLink="/projects" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a routerLink="/experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a routerLink="/contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right Section -->
+      <div class="d-flex align-items-center gap-3">
+        <!-- Color Mode -->
+        <!-- <div class="color-mode d-flex align-items-center">
+          <i class="uil uil-sun me-1"></i>
+          <span>Color mode</span>
+        </div> -->
+
+        <!-- Toggle Login / Read Only -->
+        <button
+          class="btn btn-outline-primary btn-sm px-3"
+          (click)="toggleLogin()"
+        >
+          {{ isLoggedIn ? 'Logout' : 'Login' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
